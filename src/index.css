@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Great+Vibes&family=JetBrains+Mono:wght@300;400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-cursive: "Great Vibes", cursive;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-rose-gold: #c39797;
+  --color-romantic-pink: #fbcfe8;
+  --color-warm-gold: #d4af37;
+  --color-dreamy-purple: #4c1d95;
+}
+
+/* Custom romantic style scrollbars and effects */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 230, 235, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(195, 151, 151, 0.4);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(195, 151, 151, 0.7);
+}
+
+@layer utilities {
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .glassmorphism-dark {
+    background: rgba(25, 15, 35, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glow-rose {
+    box-shadow: 0 0 30px rgba(244, 63, 94, 0.15);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+  }
+
+  /* Custom subtle animations */
+  .animate-slow-fade {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Raindrop drawing styles */
+.raindrop {
+  position: absolute;
+  background: linear-gradient(transparent, rgba(162, 186, 245, 0.4));
+  width: 1px;
+  height: 45px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Soft spark styles */
+.spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "A Letter From My Heart",
+  "description": "An elegant, cinematic and emotional interactive birthday letter, apology, story, and gift for a loved one.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
